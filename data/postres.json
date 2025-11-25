@@ -1,0 +1,7 @@
+{
+  "postres": [
+    { "nombre": "Fresas con Crema", "precio": 48 },
+    { "nombre": "Duraznos con Crema", "precio": 48 },
+    { "nombre": "Pay de Limón", "precio": 48 }
+  ]
+}

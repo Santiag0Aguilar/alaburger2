@@ -1,0 +1,41 @@
+{
+  "cazuelitas": [
+    {
+      "nombre": "Orden de Cazuelitas",
+      "precio": 85,
+      "descripcion": "Arrachera, chistorra, longaniza, tripa, costilla y bistec. 1 pieza por $30."
+    },
+    {
+      "nombre": "Arrachera",
+      "precio": 35
+    },
+    {
+      "nombre": "Chistorra",
+      "precio": 35
+    },
+    {
+      "nombre": "Chorizo Argentino",
+      "precio": 35
+    },
+    {
+      "nombre": "Longaniza",
+      "precio": 35
+    },
+    {
+      "nombre": "Tripa",
+      "precio": 35
+    },
+    {
+      "nombre": "Costilla",
+      "precio": 35
+    },
+    {
+      "nombre": "Bistec",
+      "precio": 35
+    },
+    {
+      "nombre": "Campechano",
+      "precio": 35
+    }
+  ]
+}

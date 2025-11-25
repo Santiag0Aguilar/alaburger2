@@ -1,0 +1,14 @@
+{
+  "paquetes": [
+    {
+      "nombre": "Paquete Individual 1",
+      "precio": 120,
+      "descripcion": "Hamburguesa, papas, alitas."
+    },
+    {
+      "nombre": "Paquete Individual 2",
+      "precio": 180,
+      "descripcion": "Hot dog, papas, alitas."
+    }
+  ]
+}

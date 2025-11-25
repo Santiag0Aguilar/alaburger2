@@ -1,0 +1,24 @@
+{
+  "papas": [
+    {
+      "nombre": "Papas Naturales",
+      "precio": 45
+    },
+    {
+      "nombre": "Papas Queso Tocino",
+      "precio": 65
+    },
+    {
+      "nombre": "Papas a la Francesa",
+      "precio": 45
+    },
+    {
+      "nombre": "Hotdog",
+      "precio": 55
+    },
+    {
+      "nombre": "Hot Dog con Chorizo",
+      "precio": 65
+    }
+  ]
+}

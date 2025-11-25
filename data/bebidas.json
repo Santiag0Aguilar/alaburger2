@@ -1,0 +1,31 @@
+{
+  "bebidas": {
+    "micheladas": [
+      { "nombre": "Camarón", "precio": 140 },
+      { "nombre": "Clamochela", "precio": 90 },
+      { "nombre": "Cubana", "precio": 90 },
+      { "nombre": "Chelada", "precio": 90 },
+      {
+        "nombre": "Michelada de Sabor",
+        "precio": 90,
+        "sabores": ["Tamarindo", "Mango", "Fresa", "Mora Azul"]
+      }
+    ],
+    "azulitos": 90,
+    "mojitos": {
+      "precio": 90,
+      "sabores": ["Clásico", "Fresa", "Durazno", "Mango"]
+    },
+    "mojito_frutos_rojos": 100,
+    "refrescos": {
+      "coca": 25,
+      "boing": 25,
+      "agua_mineral": 25,
+      "cafe_de_olla": 30
+    },
+    "agua_de_mazapan": {
+      "medio_litro": 45,
+      "litro": 80
+    }
+  }
+}

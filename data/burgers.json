@@ -1,0 +1,61 @@
+{
+  "burgers": [
+    {
+      "nombre": "Clasic Burger",
+      "precio_ch": 75,
+      "precio_g": 98,
+      "descripcion": "Hamburguesa 150g carne, queso amarillo, queso Oaxaca, jamón, vegetales, aderezos y picante."
+    },
+    {
+      "nombre": "Cow Burger",
+      "precio_ch": 75,
+      "precio_g": 98,
+      "descripcion": "Hamburguesa 150g carne, queso manchego, queso amarillo, tocino, vegetales, aderezos y picante."
+    },
+    {
+      "nombre": "Hue Burger",
+      "precio_ch": 88,
+      "precio_g": 98,
+      "descripcion": "Hamburguesa 150g carne, huevo, queso manchego, amarillo, tocino, vegetales, aderezos y picante."
+    },
+    {
+      "nombre": "Burger Chiken",
+      "precio_ch": 75,
+      "precio_g": 98,
+      "descripcion": "Crujipollo, queso amarillo, queso manchego, vegetales, aderezos."
+    },
+    {
+      "nombre": "Burger Ranch",
+      "precio_ch": 88,
+      "precio_g": 95,
+      "descripcion": "Arrachera en trozo con cebolla caramelizada, queso Oaxaca, tocino, vegetales, aderezos."
+    },
+    {
+      "nombre": "Hoops Burger",
+      "precio_ch": 88,
+      "precio_g": 95,
+      "descripcion": "Hamburguesa 150g carne, quesos amarillo y manchego, aros de cebolla, vegetales, aderezos."
+    },
+    {
+      "nombre": "Mar y Tierra",
+      "precio_ch": 185,
+      "precio_g": 125,
+      "descripcion": "Hamburguesa 150g carne, camarones a la plancha, quesos amarillo y manchego, vegetales, aderezos."
+    },
+    {
+      "nombre": "Patter Burger",
+      "precio": 155,
+      "descripcion": "Hamburguesa 150g carne, camarones, arrachera, tocino, vegetales y aderezos."
+    },
+    {
+      "nombre": "Smachs Burger",
+      "precio": 158,
+      "descripcion": "Pan brioche, hamburguesa con carne 100% res con queso tipo americano, mermelada de tocino, aderezo."
+    },
+    {
+      "nombre": "Cheese Burger",
+      "precio": 160,
+      "descripcion": "Hamburguesa 150g carne, quesos manchego, amarillo, tocino, cebolla caramelizada, aderezos y picante. Cubierta de queso cheddar y trozos de tocino."
+    }
+  ]
+}

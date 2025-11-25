@@ -1,0 +1,34 @@
+{
+  "alitas": [
+    {
+      "nombre": "Orden de Alitas",
+      "precio": 78
+    },
+    {
+      "nombre": "Orden de Bonelees",
+      "precio": 88,
+      "descripcion": "Acompañado de aderezo Ranch y vegetales."
+    },
+    {
+      "nombre": "Alipapas",
+      "precio": 98
+    },
+    {
+      "nombre": "Bonelees con Papas",
+      "precio": 100
+    },
+    {
+      "nombre": "Super Alas",
+      "precio": 200,
+      "descripcion": "20 piezas acompañadas de aderezo Ranch."
+    }
+  ],
+  "salsas": [
+    "Pica Piña",
+    "Mango Habanero",
+    "Bravas",
+    "Búfalo",
+    "Tamarindo Chipotle",
+    "BBQ"
+  ]
+}
