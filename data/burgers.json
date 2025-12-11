@@ -41,21 +41,6 @@
       "precio_ch": 185,
       "precio_g": 125,
       "descripcion": "Hamburguesa 150g carne, camarones a la plancha, quesos amarillo y manchego, vegetales, aderezos."
-    },
-    {
-      "nombre": "Patter Burger",
-      "precio": 155,
-      "descripcion": "Hamburguesa 150g carne, camarones, arrachera, tocino, vegetales y aderezos."
-    },
-    {
-      "nombre": "Smachs Burger",
-      "precio": 158,
-      "descripcion": "Pan brioche, hamburguesa con carne 100% res con queso tipo americano, mermelada de tocino, aderezo."
-    },
-    {
-      "nombre": "Cheese Burger",
-      "precio": 160,
-      "descripcion": "Hamburguesa 150g carne, quesos manchego, amarillo, tocino, cebolla caramelizada, aderezos y picante. Cubierta de queso cheddar y trozos de tocino."
     }
   ]
 }

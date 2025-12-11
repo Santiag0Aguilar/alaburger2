@@ -1,0 +1,40 @@
+{
+  "tacos": [
+    {
+      "nombre": "Taco de Arrachera",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco de Chistorra",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco de Chorizo Argentino",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco de Longaniza",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco de Tripa",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco de Costilla",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco de Bistec",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco Campechano",
+      "precio": 35
+    },
+    {
+      "nombre": "Taco con tortilla de harina y queso",
+      "precio": 45
+    }
+  ]
+}
