@@ -1,6 +1,7 @@
 async function fetchPapas() {
   try {
-    const url = "../../../../data/papas.json";
+    const url =
+      "https://github.com/Santiag0Aguilar/alaburger2/blob/main/data/papas.json";
     const response = await fetch(url);
     if (!response.ok) throw new Error("Error al cargar");
 

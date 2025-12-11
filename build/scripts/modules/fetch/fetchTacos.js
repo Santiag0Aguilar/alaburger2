@@ -1,6 +1,7 @@
 async function fetchTacos() {
   try {
-    const url = "../../../../data/tacos.json";
+    const url =
+      "https://github.com/Santiag0Aguilar/alaburger2/blob/main/data/tacos.json";
     const response = await fetch(url);
     if (!response.ok) throw new Error("Error al cargar");
 
