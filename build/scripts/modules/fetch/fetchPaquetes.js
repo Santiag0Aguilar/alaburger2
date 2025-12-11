@@ -1,7 +1,7 @@
 async function fetchPaquetes() {
   try {
     const url =
-      "https://github.com/Santiag0Aguilar/alaburger2/blob/main/data/paquetes.json";
+      "https://raw.githubusercontent.com/Santiag0Aguilar/alaburger2/main/data/paquetes.json";
     const response = await fetch(url);
     if (!response.ok) throw new Error("Error al cargar");
 

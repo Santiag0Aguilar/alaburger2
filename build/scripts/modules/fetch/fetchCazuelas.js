@@ -1,7 +1,7 @@
 async function fetchCazuelas() {
   try {
     const url =
-      "https://github.com/Santiag0Aguilar/alaburger2/blob/main/data/cazuelas.json";
+      "https://raw.githubusercontent.com/Santiag0Aguilar/alaburger2/main/data/cazuelas.json";
     const response = await fetch(url);
     if (!response.ok) throw new Error("Error al cargar");
 
