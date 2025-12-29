@@ -1,0 +1,53 @@
+{
+  "categoria": "alitas",
+  "productos": [
+    {
+      "id": "orden-alitas",
+      "nombre": "Orden de Alitas",
+      "descripcion": null,
+      "basePrice": 78,
+      "variants": [
+        {
+          "type": "salsa",
+          "required": true,
+          "options": [
+            { "label": "Pica Piña" },
+            { "label": "Mango Habanero" },
+            { "label": "Bravas" },
+            { "label": "Búfalo" },
+            { "label": "Tamarindo Chipotle" },
+            { "label": "BBQ" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orden-boneless",
+      "nombre": "Orden de Boneless",
+      "descripcion": "Acompañado de aderezo Ranch y vegetales.",
+      "basePrice": 88,
+      "variants": []
+    },
+    {
+      "id": "alipapas",
+      "nombre": "Alipapas",
+      "descripcion": null,
+      "basePrice": 98,
+      "variants": []
+    },
+    {
+      "id": "boneless-papas",
+      "nombre": "Boneless con Papas",
+      "descripcion": null,
+      "basePrice": 100,
+      "variants": []
+    },
+    {
+      "id": "super-alas",
+      "nombre": "Super Alas",
+      "descripcion": "20 piezas acompañadas de aderezo Ranch.",
+      "basePrice": 200,
+      "variants": []
+    }
+  ]
+}

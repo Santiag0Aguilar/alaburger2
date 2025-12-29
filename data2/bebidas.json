@@ -1,0 +1,125 @@
+{
+  "categoria": "bebidas",
+  "productos": [
+    {
+      "id": "michelada-camaron",
+      "nombre": "Michelada Camarón",
+      "descripcion": null,
+      "basePrice": 140,
+      "variants": []
+    },
+    {
+      "id": "michelada-clamochela",
+      "nombre": "Clamochela",
+      "descripcion": null,
+      "basePrice": 90,
+      "variants": []
+    },
+    {
+      "id": "michelada-cubana",
+      "nombre": "Cubana",
+      "descripcion": null,
+      "basePrice": 90,
+      "variants": []
+    },
+    {
+      "id": "michelada-chelada",
+      "nombre": "Chelada",
+      "descripcion": null,
+      "basePrice": 90,
+      "variants": []
+    },
+    {
+      "id": "michelada-sabor",
+      "nombre": "Michelada de Sabor",
+      "descripcion": null,
+      "basePrice": 90,
+      "variants": [
+        {
+          "type": "flavor",
+          "required": true,
+          "options": [
+            { "label": "Tamarindo" },
+            { "label": "Mango" },
+            { "label": "Fresa" },
+            { "label": "Mora Azul" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "azulito",
+      "nombre": "Azulito",
+      "descripcion": null,
+      "basePrice": 90,
+      "variants": []
+    },
+    {
+      "id": "mojito",
+      "nombre": "Mojito",
+      "descripcion": null,
+      "basePrice": 90,
+      "variants": [
+        {
+          "type": "flavor",
+          "options": [
+            { "label": "Clásico" },
+            { "label": "Fresa" },
+            { "label": "Durazno" },
+            { "label": "Mango" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mojito-frutos-rojos",
+      "nombre": "Mojito Frutos Rojos",
+      "descripcion": null,
+      "basePrice": 100,
+      "variants": []
+    },
+    {
+      "id": "agua-mazapan",
+      "nombre": "Agua de Mazapán",
+      "descripcion": null,
+      "basePrice": 45,
+      "variants": [
+        {
+          "type": "size",
+          "options": [
+            { "label": "Medio Litro", "priceModifier": 0 },
+            { "label": "Litro", "priceModifier": 35 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coca-cola",
+      "nombre": "Coca Cola",
+      "descripcion": null,
+      "basePrice": 25,
+      "variants": []
+    },
+    {
+      "id": "boing",
+      "nombre": "Boing",
+      "descripcion": null,
+      "basePrice": 25,
+      "variants": []
+    },
+    {
+      "id": "agua-mineral",
+      "nombre": "Agua Mineral",
+      "descripcion": null,
+      "basePrice": 25,
+      "variants": []
+    },
+    {
+      "id": "cafe-olla",
+      "nombre": "Café de Olla",
+      "descripcion": null,
+      "basePrice": 30,
+      "variants": []
+    }
+  ]
+}

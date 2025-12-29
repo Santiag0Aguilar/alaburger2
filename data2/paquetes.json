@@ -1,0 +1,19 @@
+{
+  "categoria": "paquetes",
+  "productos": [
+    {
+      "id": "paquete-1",
+      "nombre": "Paquete Individual 1",
+      "descripcion": "Hamburguesa, papas y alitas.",
+      "basePrice": 120,
+      "variants": []
+    },
+    {
+      "id": "paquete-2",
+      "nombre": "Paquete Individual 2",
+      "descripcion": "Hot dog, papas y alitas.",
+      "basePrice": 180,
+      "variants": []
+    }
+  ]
+}

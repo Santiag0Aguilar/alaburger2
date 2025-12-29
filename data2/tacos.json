@@ -1,0 +1,33 @@
+{
+  "categoria": "tacos",
+  "productos": [
+    {
+      "id": "taco-arrachera",
+      "nombre": "Taco de Arrachera",
+      "descripcion": null,
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-chistorra",
+      "nombre": "Taco de Chistorra",
+      "descripcion": null,
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-campechano",
+      "nombre": "Taco Campechano",
+      "descripcion": null,
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-harina-queso",
+      "nombre": "Taco con tortilla de harina y queso",
+      "descripcion": null,
+      "basePrice": 45,
+      "variants": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "categoria": "cazuelitas",
+  "productos": [
+    {
+      "id": "orden-cazuelitas",
+      "nombre": "Orden de Cazuelitas",
+      "descripcion": "Arrachera, chistorra, longaniza, tripa, costilla y bistec.",
+      "basePrice": 85,
+      "variants": []
+    },
+    {
+      "id": "pieza-cazuela",
+      "nombre": "Pieza individual",
+      "descripcion": null,
+      "basePrice": 35,
+      "variants": [
+        {
+          "type": "proteina",
+          "options": [
+            { "label": "Arrachera" },
+            { "label": "Chistorra" },
+            { "label": "Chorizo Argentino" },
+            { "label": "Longaniza" },
+            { "label": "Tripa" },
+            { "label": "Costilla" },
+            { "label": "Bistec" },
+            { "label": "Campechano" }
+          ]
+        }
+      ]
+    }
+  ]
+}

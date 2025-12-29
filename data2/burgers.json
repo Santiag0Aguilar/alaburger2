@@ -1,0 +1,36 @@
+{
+  "categoria": "burgers",
+  "productos": [
+    {
+      "id": "classic-burger",
+      "nombre": "Classic Burger",
+      "descripcion": "Hamburguesa 150g carne, queso amarillo, queso Oaxaca, jamón, vegetales, aderezos y picante.",
+      "basePrice": 75,
+      "variants": [
+        {
+          "type": "size",
+          "required": true,
+          "options": [
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 23 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cow-burger",
+      "nombre": "Cow Burger",
+      "descripcion": "Hamburguesa 150g carne, queso manchego, queso amarillo, tocino, vegetales, aderezos y picante.",
+      "basePrice": 75,
+      "variants": [
+        {
+          "type": "size",
+          "options": [
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 23 }
+          ]
+        }
+      ]
+    }
+  ]
+}

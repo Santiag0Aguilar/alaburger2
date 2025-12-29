@@ -1,0 +1,33 @@
+{
+  "categoria": "papas",
+  "productos": [
+    {
+      "id": "papas-naturales",
+      "nombre": "Papas Naturales",
+      "descripcion": null,
+      "basePrice": 45,
+      "variants": []
+    },
+    {
+      "id": "papas-queso-tocino",
+      "nombre": "Papas Queso Tocino",
+      "descripcion": null,
+      "basePrice": 65,
+      "variants": []
+    },
+    {
+      "id": "hotdog",
+      "nombre": "Hot Dog",
+      "descripcion": null,
+      "basePrice": 55,
+      "variants": []
+    },
+    {
+      "id": "hotdog-chorizo",
+      "nombre": "Hot Dog con Chorizo",
+      "descripcion": null,
+      "basePrice": 65,
+      "variants": []
+    }
+  ]
+}
