@@ -1,5 +1,5 @@
 /* la idea aqui es solo llevar la categoria indicada */
-import { cargarMenuCompleto } from "../fetch/fetch_productos.js";
+import { cargarMenuCompleto } from "./../fetch/fetch_productos.js";
 
 const menu = await cargarMenuCompleto();
 
