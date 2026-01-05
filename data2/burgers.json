@@ -12,7 +12,7 @@
           "required": true,
           "options": [
             { "label": "Chica", "priceModifier": 0 },
-            { "label": "Grande", "priceModifier": 23 }
+            { "label": "Grande", "priceModifier": 15 }
           ]
         }
       ]
@@ -28,7 +28,7 @@
           "required": true,
           "options": [
             { "label": "Chica", "priceModifier": 0 },
-            { "label": "Grande", "priceModifier": 23 }
+            { "label": "Grande", "priceModifier": 15 }
           ]
         }
       ]
@@ -60,7 +60,7 @@
           "required": true,
           "options": [
             { "label": "Chica", "priceModifier": 0 },
-            { "label": "Grande", "priceModifier": 23 }
+            { "label": "Grande", "priceModifier": 15 }
           ]
         }
       ]
@@ -123,13 +123,13 @@
       "id": "snacks-burger",
       "nombre": "Snacks Burger",
       "descripcion": "Pan brioche, hamburguesa con carne 100% res con queso tipo americano, mermelada de tocino, aderezos.",
-      "basePrice": 158
+      "basePrice": 150
     },
     {
       "id": "cheese-burger",
       "nombre": "Cheese Burger",
       "descripcion": "Hamburguesa 100% carne, queso manchego, queso amarillo, tocino, cebolla caramelizada, aderezos y picante, cubierta de queso cheddar y trozos de tocino.",
-      "basePrice": 168
+      "basePrice": 160
     }
   ]
 }
