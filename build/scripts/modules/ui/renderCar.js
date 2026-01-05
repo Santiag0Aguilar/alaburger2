@@ -9,10 +9,14 @@ export function renderCarrito() {
   if (!contenedor) return;
 
   const cart = getCart();
+  const btnWhatsapp = document.querySelector(".btn__whatsapp ");
+
+  console.log(cart);
   contenedor.innerHTML = "";
 
   if (!cart.length) {
     contenedor.innerHTML = '<p class="empty__car">Carrito vacío</p>';
+    btnWhatsapp.classList.add("hidden");
     return;
   }
 
@@ -29,6 +33,8 @@ export function renderCarrito() {
       >
         <p class="cart__item--name">
           ${item.nombre}
+          ${item.selections.burger ? `(${item.selections.burger})` : ""}
+          ${item.selections.salsa ? `(${item.selections.salsa})` : ""}
           ${item.size ? `(${item.size})` : ""}
         </p>
 

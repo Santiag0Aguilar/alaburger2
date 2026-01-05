@@ -59,6 +59,74 @@
           class="cart__notes"
           placeholder="Notas para tu pedido (ej. sin cebolla, bien cocido...)"
         ></textarea>
+        <form id="cartForm">
+          <label for="pedido">Tipo de pedido</label>
+          <select name="pedido" id="pedido" class="cart__select">
+            <option value="para llevar">A domicilio</option>
+            <option value="para recoger">Pasar a recoger</option>
+            <option value="comer aqui">Comer en el establecimiento</option>
+          </select>
+
+          <label for="pago">Tipo de pago</label>
+          <select name="pago" id="pago" class="cart__select">
+            <option value="efectivo">Efectivo</option>
+            <option value="transferencia">Transferencia bancaria</option>
+          </select>
+
+          <!-- Siempre activo -->
+          <label for="indicaciones">Indicaciones</label>
+          <input
+            type="text"
+            id="indicaciones"
+            class="cart__input"
+            placeholder="Notas para tu pedido"
+          />
+
+          <!-- Efectivo + domicilio -->
+          <div class="form__field" id="field-efectivo">
+            <label for="efectivo">Pagaré con</label>
+            <input
+              type="number"
+              id="efectivo"
+              class="cart__input"
+              placeholder="Cantidad en efectivo"
+            />
+          </div>
+
+          <!-- Solo domicilio -->
+          <div class="form__field" id="field-direccion">
+            <label for="direccion">Dirección de entrega</label>
+            <input
+              type="text"
+              id="direccion"
+              class="cart__input"
+              placeholder="Calle, número, colonia, referencias..."
+            />
+          </div>
+
+          <!-- Siempre activo -->
+          <label for="nombre">Nombre de quien recibe</label>
+          <input
+            type="text"
+            id="nombre"
+            class="cart__input"
+            placeholder="Nombre completo"
+          />
+          <!-- Siempre activo -->
+          <label for="propina">Propina (opcional)</label>
+          <input
+            type="number"
+            min="0"
+            id="propina"
+            class="cart__input"
+            placeholder="Propina (opcional)"
+          />
+
+          <button type="button" id="btnLocation" class="cart__btn">
+            📍 Usar mi ubicación exacta
+          </button>
+        </form>
+
         <button class="btn__whatsapp Btn-2">Enviar pedido por WhatsApp</button>
       </div>
     </section>

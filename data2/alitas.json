@@ -8,7 +8,9 @@
       "basePrice": 70,
       "variants": [
         {
-          "type": "salsa",
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona salsa de alitas",
           "required": true,
           "options": [
             { "label": "Pica Piña" },
@@ -26,28 +28,88 @@
       "nombre": "Orden de Boneless",
       "descripcion": "Acompañado de aderezo Ranch y vegetales.",
       "basePrice": 80,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona salsa de boneless",
+          "required": true,
+          "options": [
+            { "label": "Pica Piña" },
+            { "label": "Mango Habanero" },
+            { "label": "Bravas" },
+            { "label": "Búfalo" },
+            { "label": "Tamarindo Chipotle" },
+            { "label": "BBQ" }
+          ]
+        }
+      ]
     },
     {
       "id": "alipapas",
       "nombre": "Alipapas",
       "descripcion": null,
       "basePrice": 90,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona salsa de Alipapas",
+          "required": true,
+          "options": [
+            { "label": "Pica Piña" },
+            { "label": "Mango Habanero" },
+            { "label": "Bravas" },
+            { "label": "Búfalo" },
+            { "label": "Tamarindo Chipotle" },
+            { "label": "BBQ" }
+          ]
+        }
+      ]
     },
     {
       "id": "boneless-papas",
       "nombre": "Boneless con Papas",
       "descripcion": null,
       "basePrice": 100,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona salsa de Boneless con Papas",
+          "required": true,
+          "options": [
+            { "label": "Pica Piña" },
+            { "label": "Mango Habanero" },
+            { "label": "Bravas" },
+            { "label": "Búfalo" },
+            { "label": "Tamarindo Chipotle" },
+            { "label": "BBQ" }
+          ]
+        }
+      ]
     },
     {
       "id": "super-alas",
       "nombre": "Super Alas",
       "descripcion": "20 piezas acompañadas de aderezo Ranch.",
       "basePrice": 200,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona salsa de Super Alas",
+          "required": true,
+          "options": [
+            { "label": "Pica Piña" },
+            { "label": "Mango Habanero" },
+            { "label": "Bravas" },
+            { "label": "Búfalo" },
+            { "label": "Tamarindo Chipotle" },
+            { "label": "BBQ" }
+          ]
+        }
+      ]
     }
   ]
 }

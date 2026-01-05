@@ -2,6 +2,7 @@ import getCategoria from "./save_filter.js";
 import {
   agregarAlCarrito,
   obtenerPrecio,
+  tieneOptions,
   tieneTamanios,
 } from "./../utils/cartLogic.js";
 import { actualizarContadorCarrito } from "./cartCounter.js";
@@ -24,7 +25,7 @@ export default function getMenu() {
 
     Object.keys(informacion).forEach((key) => {
       const producto = informacion[key];
-
+      console.log(producto);
       const precioCh =
         producto.variants?.[0]?.type === "size"
           ? producto.basePrice + producto.variants[0].options[0].priceModifier
@@ -35,6 +36,32 @@ export default function getMenu() {
           ? producto.basePrice + producto.variants[0].options[1].priceModifier
           : null;
 
+      /* Actualizacion inicio AQUI */
+      const opcionesHTML = (producto.variants ?? [])
+        .filter((variant) => variant.type === "seleccion")
+        .map((variant) => {
+          const opciones = (variant.options ?? [])
+            .map((opt) => `<option value="${opt.label}">${opt.label}</option>`)
+            .join("");
+
+          return `
+      <form class="form__size">
+        <select
+          class="select__option"
+          data-key="${variant.key}"
+          required
+        >
+          <option value="" selected disabled>
+            --${variant.label}--
+          </option>
+          ${opciones}
+        </select>
+      </form>
+    `;
+        })
+        .join("");
+
+      /* Actualizacion fin aqui */
       html += `
         <article class="menu__interfaz--item"
           data-id="${producto.id}"
@@ -71,6 +98,9 @@ export default function getMenu() {
               `
                 : ""
             }
+          ${opcionesHTML}
+
+
 
             <div class="item__precio--button">
               <button class="btn-add">Agregar</button>
@@ -104,12 +134,47 @@ export default function getMenu() {
           size = select.value;
         }
 
+        const selects = card.querySelectorAll(".select__option");
+
+        const selections = {};
+        let faltaSeleccion = false;
+
+        // 🔥 Solo valida si hay selects
+        if (selects.length > 0) {
+          selects.forEach((select) => {
+            if (!select.value) {
+              faltaSeleccion = true;
+              return;
+            }
+            selections[select.dataset.key] = select.value;
+          });
+
+          if (faltaSeleccion) {
+            body.appendChild(alertSize());
+            return;
+          }
+        }
+
+        let option = null;
+
+        if (tieneOptions(producto)) {
+          const selectOption = card.querySelector(".select__option");
+
+          if (!selectOption.value) {
+            body.appendChild(alertSize()); // puedes crear alertOption luego
+            return;
+          }
+
+          option = selectOption.value;
+        }
+
         const precio = obtenerPrecio(producto, size);
         console.log(precio);
         agregarAlCarrito({
           id: producto.id,
           nombre: producto.nombre,
           size,
+          selections, // {} si no aplica
           precio,
         });
 

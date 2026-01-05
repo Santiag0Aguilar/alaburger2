@@ -5,7 +5,7 @@
       "id": "classic-burger",
       "nombre": "Classic Burger",
       "descripcion": "Hamburguesa 100% carne, queso amarillo, queso Oaxaca, jamón, vegetales, aderezos y picante.",
-      "basePrice": 75,
+      "basePrice": 70,
       "variants": [
         {
           "type": "size",
@@ -133,5 +133,3 @@
     }
   ]
 }
-
-

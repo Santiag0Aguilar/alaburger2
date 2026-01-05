@@ -1,8 +1,7 @@
 // services/menuService.js
 import generalFetch from "./../utils/generalFetch.js";
 
-const URL_BASE =
-  "https://raw.githubusercontent.com/Santiag0Aguilar/alaburger2/main/data2";
+const URL_BASE = "./../../../../data2";
 
 const categorias = [
   "alitas",

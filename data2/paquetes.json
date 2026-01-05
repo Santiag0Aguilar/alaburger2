@@ -5,15 +5,57 @@
       "id": "paquete-1",
       "nombre": "Paquete Individual 1",
       "descripcion": "Hamburguesa, papas y alitas.",
-      "basePrice": 120,
-      "variants": []
+      "basePrice": 125,
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "burger",
+          "label": "Selecciona tu hamburguesa",
+          "required": true,
+          "options": [
+            { "label": "classic-burger", "priceModifier": 0 },
+            { "label": "cow-burger", "priceModifier": 0 },
+            { "label": "hue-burger", "priceModifier": 0 },
+            { "label": "burger-chicken", "priceModifier": 0 }
+          ]
+        },
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona salsa de alitas",
+          "required": true,
+          "options": [
+            { "label": "Pica Piña" },
+            { "label": "Mango Habanero" },
+            { "label": "Bravas" },
+            { "label": "Búfalo" },
+            { "label": "Tamarindo Chipotle" },
+            { "label": "BBQ" }
+          ]
+        }
+      ]
     },
     {
       "id": "paquete-2",
       "nombre": "Paquete Individual 2",
       "descripcion": "Hot dog, papas y alitas.",
       "basePrice": 100,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona salsa de alitas",
+          "required": true,
+          "options": [
+            { "label": "Pica Piña" },
+            { "label": "Mango Habanero" },
+            { "label": "Bravas" },
+            { "label": "Búfalo" },
+            { "label": "Tamarindo Chipotle" },
+            { "label": "BBQ" }
+          ]
+        }
+      ]
     }
   ]
 }

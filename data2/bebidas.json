@@ -6,28 +6,60 @@
       "nombre": "Michelada Camarón",
       "descripcion": null,
       "basePrice": 140,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona cerveza",
+          "required": true,
+          "options": [{ "label": "Victoria" }, { "label": "Corona" }]
+        }
+      ]
     },
     {
       "id": "michelada-clamochela",
       "nombre": "Clamochela",
       "descripcion": null,
       "basePrice": 90,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona cerveza",
+          "required": true,
+          "options": [{ "label": "Victoria" }, { "label": "Corona" }]
+        }
+      ]
     },
     {
       "id": "michelada-cubana",
       "nombre": "Cubana",
       "descripcion": null,
       "basePrice": 90,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona cerveza",
+          "required": true,
+          "options": [{ "label": "Victoria" }, { "label": "Corona" }]
+        }
+      ]
     },
     {
       "id": "michelada-chelada",
       "nombre": "Chelada",
       "descripcion": null,
       "basePrice": 90,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona cerveza",
+          "required": true,
+          "options": [{ "label": "Victoria" }, { "label": "Corona" }]
+        }
+      ]
     },
     {
       "id": "michelada-sabor",
@@ -36,14 +68,23 @@
       "basePrice": 90,
       "variants": [
         {
-          "type": "flavor",
+          "type": "seleccion",
+          "key": "burger",
+          "label": "Selecciona tu sabor",
           "required": true,
           "options": [
-            { "label": "Tamarindo" },
-            { "label": "Mango" },
-            { "label": "Fresa" },
-            { "label": "Mora Azul" }
+            { "label": "Tamarindo", "priceModifier": 0 },
+            { "label": "Mango", "priceModifier": 0 },
+            { "label": "Fresa", "priceModifier": 0 },
+            { "label": "Mora Azul", "priceModifier": 0 }
           ]
+        },
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona cerveza",
+          "required": true,
+          "options": [{ "label": "Victoria" }, { "label": "Corona" }]
         }
       ]
     },
@@ -61,12 +102,15 @@
       "basePrice": 90,
       "variants": [
         {
-          "type": "flavor",
+          "type": "seleccion",
+          "key": "burger",
+          "label": "Selecciona tu sabor",
+          "required": true,
           "options": [
-            { "label": "Clásico" },
-            { "label": "Fresa" },
-            { "label": "Durazno" },
-            { "label": "Mango" }
+            { "label": "Clásico", "priceModifier": 0 },
+            { "label": "Fresa", "priceModifier": 0 },
+            { "label": "Durazno", "priceModifier": 0 },
+            { "label": "Mango", "priceModifier": 0 }
           ]
         }
       ]
@@ -87,8 +131,8 @@
         {
           "type": "size",
           "options": [
-            { "label": "Medio Litro", "priceModifier": 0 },
-            { "label": "Litro", "priceModifier": 35 }
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 35 }
           ]
         }
       ]

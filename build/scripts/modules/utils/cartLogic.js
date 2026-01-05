@@ -5,19 +5,34 @@ export function tieneTamanios(producto) {
   return producto.variants?.[0]?.type === "size";
 }
 
-export function obtenerPrecio(producto, size = null) {
-  if (!size) return producto.basePrice;
+export function tieneOptions(producto) {
+  return producto.variants?.[0]?.type === "seleccion";
+}
+
+export function obtenerPrecio(producto, seleccion = null) {
+  if (!seleccion) return producto.basePrice;
 
   const variant = producto.variants[0];
-  const opcion = variant.options.find((opt) => opt.label === size);
+  const opcion = variant.options.find((opt) => opt.label === seleccion);
 
   return producto.basePrice + opcion.priceModifier;
 }
 
-export function agregarAlCarrito({ id, nombre, size, precio }) {
+export function agregarAlCarrito({
+  id,
+  nombre,
+  size = null,
+  selections = {},
+  precio,
+}) {
   const cart = getCart();
 
-  const existente = cart.find((item) => item.id === id && item.size === size);
+  const existente = cart.find(
+    (item) =>
+      item.id === id &&
+      item.size === size &&
+      JSON.stringify(item.selections || {}) === JSON.stringify(selections)
+  );
 
   if (existente) {
     existente.cantidad++;
@@ -26,6 +41,7 @@ export function agregarAlCarrito({ id, nombre, size, precio }) {
       id,
       nombre,
       size,
+      selections,
       precio,
       cantidad: 1,
     });

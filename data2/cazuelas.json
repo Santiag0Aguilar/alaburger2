@@ -10,21 +10,23 @@
     },
     {
       "id": "pieza-cazuela",
-      "nombre": "Pieza individual",
+      "nombre": "Pieza individual de cazuelita",
       "descripcion": null,
       "basePrice": 30,
       "variants": [
         {
-          "type": "proteina",
+          "type": "seleccion",
+          "key": "burger",
+          "label": "Selecciona tu carne",
+          "required": true,
           "options": [
-            { "label": "Arrachera" },
-            { "label": "Chistorra" },
-            { "label": "Chorizo Argentino" },
-            { "label": "Longaniza" },
-            { "label": "Tripa" },
-            { "label": "Costilla" },
-            { "label": "Bistec" },
-            { "label": "Campechano" }
+            { "label": "Arrachera", "priceModifier": 0 },
+            { "label": "Chistorra", "priceModifier": 0 },
+            { "label": "Chorizo Argentino", "priceModifier": 0 },
+            { "label": "Longaniza", "priceModifier": 0 },
+            { "label": "Tripa", "priceModifier": 0 },
+            { "label": "Costilla", "priceModifier": 0 },
+            { "label": "Bistec", "priceModifier": 0 }
           ]
         }
       ]

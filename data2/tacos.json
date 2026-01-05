@@ -62,7 +62,34 @@
       "nombre": "Taco con tortilla de harina y queso",
       "descripcion": "Tortilla de harina, carne a elección, queso derretido.",
       "basePrice": 45,
-      "variants": []
+      "variants": [
+        {
+          "type": "seleccion",
+          "key": "burger",
+          "label": "Selecciona tu carne",
+          "required": true,
+          "options": [
+            { "label": "Arrachera", "priceModifier": 0 },
+            { "label": "Chistorra", "priceModifier": 0 },
+            { "label": "Chorizo Argentino", "priceModifier": 0 },
+            { "label": "Longaniza", "priceModifier": 0 },
+            { "label": "Tripa", "priceModifier": 0 },
+            { "label": "Costilla", "priceModifier": 0 },
+            { "label": "Bistec", "priceModifier": 0 }
+          ]
+        },
+        {
+          "type": "seleccion",
+          "key": "salsa",
+          "label": "Selecciona el tipo de taco",
+          "required": true,
+          "options": [
+            { "label": "Solo tortilla de harina" },
+            { "label": "Solo queso" },
+            { "label": "Taco de harina y queso" }
+          ]
+        }
+      ]
     }
   ]
 }
