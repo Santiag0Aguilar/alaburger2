@@ -7,7 +7,11 @@ export function generarMensajeWhatsApp() {
   if (!cart.length) return "";
 
   let total = 0;
-  let mensaje = "🛒 *Pedido*\n\n";
+
+  let mensaje =
+    "🔥 *ALA BURGER* 🔥\n" +
+    "━━━━━━━━━━━━━━━\n" +
+    "🍔 *Pedido del cliente*\n\n";
 
   cart.forEach((item) => {
     const subtotal = item.precio * item.cantidad;
@@ -15,15 +19,19 @@ export function generarMensajeWhatsApp() {
 
     mensaje += `• ${item.nombre}`;
     if (item.size) mensaje += ` (${item.size})`;
-    mensaje += ` x${item.cantidad} — $${subtotal}\n`;
+    mensaje += `\n  ➕ Cantidad: ${item.cantidad}`;
+    mensaje += `\n  💲 Subtotal: $${subtotal}\n\n`;
   });
 
   const notes = getNotes();
   if (notes) {
-    mensaje += `\n📝 *Notas del cliente:*\n${notes}\n`;
+    mensaje += "📝 *Notas del pedido*\n" + `${notes}\n\n`;
   }
 
-  mensaje += `\n💵 *Total: $${total}*`;
+  mensaje +=
+    "━━━━━━━━━━━━━━━\n" +
+    `💵 *Total a pagar: $${total}*\n\n` +
+    "✅ *Gracias por ordenar en AlaBurger* 🍔";
 
   return encodeURIComponent(mensaje);
 }
