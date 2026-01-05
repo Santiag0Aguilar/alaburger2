@@ -9,6 +9,13 @@
       "variants": []
     },
     {
+      "id": "papas-francesas",
+      "nombre": "Papas a la Francesa",
+      "descripcion": null,
+      "basePrice": 45,
+      "variants": []
+    },
+    {
       "id": "papas-queso-tocino",
       "nombre": "Papas Queso Tocino",
       "descripcion": null,
@@ -19,7 +26,7 @@
       "id": "hotdog",
       "nombre": "Hot Dog",
       "descripcion": null,
-      "basePrice": 55,
+      "basePrice": 50,
       "variants": []
     },
     {

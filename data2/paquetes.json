@@ -12,7 +12,7 @@
       "id": "paquete-2",
       "nombre": "Paquete Individual 2",
       "descripcion": "Hot dog, papas y alitas.",
-      "basePrice": 180,
+      "basePrice": 100,
       "variants": []
     }
   ]

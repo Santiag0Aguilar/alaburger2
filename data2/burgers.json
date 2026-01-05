@@ -4,7 +4,7 @@
     {
       "id": "classic-burger",
       "nombre": "Classic Burger",
-      "descripcion": "Hamburguesa 150g carne, queso amarillo, queso Oaxaca, jamón, vegetales, aderezos y picante.",
+      "descripcion": "Hamburguesa 100% carne, queso amarillo, queso Oaxaca, jamón, vegetales, aderezos y picante.",
       "basePrice": 75,
       "variants": [
         {
@@ -20,17 +20,116 @@
     {
       "id": "cow-burger",
       "nombre": "Cow Burger",
-      "descripcion": "Hamburguesa 150g carne, queso manchego, queso amarillo, tocino, vegetales, aderezos y picante.",
+      "descripcion": "Hamburguesa 100% carne, queso manchego, queso amarillo, tocino, vegetales, aderezos y picante.",
       "basePrice": 75,
       "variants": [
         {
           "type": "size",
+          "required": true,
           "options": [
             { "label": "Chica", "priceModifier": 0 },
             { "label": "Grande", "priceModifier": 23 }
           ]
         }
       ]
+    },
+    {
+      "id": "hue-burger",
+      "nombre": "Hue Burger",
+      "descripcion": "Hamburguesa 100% carne, huevo, queso manchego, queso amarillo, tocino, vegetales, aderezos y picante.",
+      "basePrice": 80,
+      "variants": [
+        {
+          "type": "size",
+          "required": true,
+          "options": [
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "burger-chicken",
+      "nombre": "Burger Chicken",
+      "descripcion": "Crujipollo, queso amarillo, queso manchego, vegetales, aderezos.",
+      "basePrice": 75,
+      "variants": [
+        {
+          "type": "size",
+          "required": true,
+          "options": [
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 23 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "burger-ranch",
+      "nombre": "Burger Ranch",
+      "descripcion": "Arrachera en trozo con cebolla caramelizada, queso Oaxaca, tocino, vegetales, aderezos.",
+      "basePrice": 80,
+      "variants": [
+        {
+          "type": "size",
+          "required": true,
+          "options": [
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoops-burger",
+      "nombre": "Hoops Burger",
+      "descripcion": "Aros de cebolla, queso amarillo y manchego, vegetales, aderezos.",
+      "basePrice": 80,
+      "variants": [
+        {
+          "type": "size",
+          "required": true,
+          "options": [
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mar-y-tierra",
+      "nombre": "Mar y Tierra",
+      "descripcion": "Hamburguesa 100% carne, camarones a la plancha, quesos amarillo y manchego, vegetales, aderezos.",
+      "basePrice": 105,
+      "variants": [
+        {
+          "type": "size",
+          "required": true,
+          "options": [
+            { "label": "Chica", "priceModifier": 0 },
+            { "label": "Grande", "priceModifier": 20 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "patter-burger",
+      "nombre": "Patter Burger",
+      "descripcion": "Hamburguesa 100% carne, camarones, arrachera, tocino, vegetales y aderezos.",
+      "basePrice": 155
+    },
+    {
+      "id": "snacks-burger",
+      "nombre": "Snacks Burger",
+      "descripcion": "Pan brioche, hamburguesa con carne 100% res con queso tipo americano, mermelada de tocino, aderezos.",
+      "basePrice": 158
+    },
+    {
+      "id": "cheese-burger",
+      "nombre": "Cheese Burger",
+      "descripcion": "Hamburguesa 100% carne, queso manchego, queso amarillo, tocino, cebolla caramelizada, aderezos y picante, cubierta de queso cheddar y trozos de tocino.",
+      "basePrice": 168
     }
   ]
 }

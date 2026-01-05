@@ -5,21 +5,21 @@
       "id": "fresas-crema",
       "nombre": "Fresas con Crema",
       "descripcion": null,
-      "basePrice": 48,
+      "basePrice": 40,
       "variants": []
     },
     {
       "id": "duraznos-crema",
       "nombre": "Duraznos con Crema",
       "descripcion": null,
-      "basePrice": 48,
+      "basePrice": 40,
       "variants": []
     },
     {
       "id": "pay-limon",
       "nombre": "Pay de Limón",
       "descripcion": null,
-      "basePrice": 48,
+      "basePrice": 40,
       "variants": []
     }
   ]

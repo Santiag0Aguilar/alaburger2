@@ -4,28 +4,63 @@
     {
       "id": "taco-arrachera",
       "nombre": "Taco de Arrachera",
-      "descripcion": null,
+      "descripcion": "Tortilla de maíz, arrachera.",
       "basePrice": 35,
       "variants": []
     },
     {
       "id": "taco-chistorra",
       "nombre": "Taco de Chistorra",
-      "descripcion": null,
+      "descripcion": "Tortilla de maíz, chistorra.",
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-chorizo-argentino",
+      "nombre": "Taco de Chorizo Argentino",
+      "descripcion": "Tortilla de maíz, chorizo argentino.",
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-longaniza",
+      "nombre": "Taco de Longaniza",
+      "descripcion": "Tortilla de maíz, longaniza.",
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-tripa",
+      "nombre": "Taco de Tripa",
+      "descripcion": "Tortilla de maíz, tripa.",
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-costilla",
+      "nombre": "Taco de Costilla",
+      "descripcion": "Tortilla de maíz, costilla.",
+      "basePrice": 35,
+      "variants": []
+    },
+    {
+      "id": "taco-bistec",
+      "nombre": "Taco de Bistec",
+      "descripcion": "Tortilla de maíz, bistec.",
       "basePrice": 35,
       "variants": []
     },
     {
       "id": "taco-campechano",
       "nombre": "Taco Campechano",
-      "descripcion": null,
+      "descripcion": "Tortilla de maíz, combinación de carnes.",
       "basePrice": 35,
       "variants": []
     },
     {
       "id": "taco-harina-queso",
       "nombre": "Taco con tortilla de harina y queso",
-      "descripcion": null,
+      "descripcion": "Tortilla de harina, carne a elección, queso derretido.",
       "basePrice": 45,
       "variants": []
     }

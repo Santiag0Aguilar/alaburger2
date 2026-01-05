@@ -13,12 +13,14 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header headerImage" id="Inicio">
       <div class="header__top">
         <div class="header__top--main">
-          <div class="header__top--title">
-            <span class="resaltar">Ala</span><span>burger</span>
-          </div>
+          <a href="#Inicio">
+            <div class="header__top--title">
+              <span class="resaltar">Ala</span><span>burger</span>
+            </a>
+        </div> 
 
           <img
             class="menu-icon"
@@ -29,12 +31,22 @@
 
         <div class="header__desplegable">
           <nav class="header__top--nav">
-            <a href="#">Inicio</a>
-            <a href="#">Menu</a>
-            <a href="#">Promociones</a>
-            <a href="#">Contacto</a>
+            <a href="#Menu">Menu</a>
+            <a href="#Promociones">Promociones</a>
+            <a href="#Contacto">Contacto</a>
+            <a href="carro.html">
+              <div class="cart">
+                <img
+                  width="10px"
+                  height="10px"
+                  src="build/img/shop-cart-svgrepo-com.svg"
+                  alt=""
+                />
+                <span class="cart__count">0</span>
+              </div>
+            </a>
           </nav>
-          <button class="Btn-3">Ordena ahora</button>
+          <a class="Btn-3" href="#Menu">Ordena ahora</a>
         </div>
       </div>
       <div class="header__bottom">
@@ -48,8 +60,8 @@
         </p>
 
         <div class="header__bottom--Button">
-          <button class="Btn-3">Ver Menú</button>
-          <button class="Btn-2">Ordenar por WhatsApp</button>
+          <a class="Btn-3" href="#Menu">Ver Menú</a>
+          <a class="Btn-2" href="carro.html">Ordenar por WhatsApp</a>
         </div>
       </div>
     </header>
@@ -75,16 +87,16 @@
           </div>
           <!-- Informacion hamburgesa -->
           <div class="tarjeta__informacion">
-            <h3>Smash Burger</h3>
+            <h3>Petter Burger</h3>
             <p>
-              Nuestra hamburguesa más vendida. Carne jugosa, queso derretido y
-              salsa especial.
+              Hamburgesa %100 Carne, camarones, arachera, tocino, vegetales y
+              aderezos.
             </p>
           </div>
 
           <div class="tarjeta__precio">
-            <p>$79</p>
-            <button class="Btn-3">Ordenar</button>
+            <p>$155</p>
+            <a class="Btn-3" href="#Menu">Ordenar</a>
           </div>
         </div>
         <!-- Fin tarjeta -->
@@ -107,16 +119,16 @@
           </div>
           <!-- Informacion hamburgesa -->
           <div class="tarjeta__informacion">
-            <h3>Smash Burger</h3>
+            <h3>Smachs Burger</h3>
             <p>
-              Nuestra hamburguesa más vendida. Carne jugosa, queso derretido y
-              salsa especial.
+              Pan brioche, hamburgesa 100% carne de res con queso tipo
+              americano, mermelada de tocino, aderezos.
             </p>
           </div>
 
           <div class="tarjeta__precio">
-            <p>$79</p>
-            <button class="Btn-3">Ordenar</button>
+            <p>$150</p>
+            <a class="Btn-3" href="#Menu">Ordenar</a>
           </div>
         </div>
         <!-- Fin tarjeta -->
@@ -138,23 +150,24 @@
           </div>
           <!-- Informacion hamburgesa -->
           <div class="tarjeta__informacion">
-            <h3>Smash Burger</h3>
+            <h3>Cheese Burger</h3>
             <p>
-              Nuestra hamburguesa más vendida. Carne jugosa, queso derretido y
-              salsa especial.
+              Hamburgesa 100% carne, queso manchego, queso amarillo, tocino,
+              cebolla caramelizada, aderezos y picante. Cubierta de queso chedar
+              y trozos de tocino.
             </p>
           </div>
 
           <div class="tarjeta__precio">
-            <p>$79</p>
-            <button class="Btn-3">Ordenar</button>
+            <p>$160</p>
+            <a class="Btn-3" href="#Menu">Ordenar</a>
           </div>
         </div>
         <!-- Fin tarjeta -->
       </div>
     </section>
 
-    <section class="menu ActivarHeader">
+    <section class="menu ActivarHeader" id="Menu">
       <div class="menu__top" data-aos="fade-up">
         <h2><span class="YellowSpan">Nuestro</span> menu</h2>
         <p>
@@ -199,14 +212,10 @@
       </div>
 
       <!-- Menu  -->
-      <div class="menu__interfaz">
-        <!-- Menu item -->
-
-        <!-- Fin menu item -->
-      </div>
+      <div class="menu__interfaz" data-aos="fade-up"></div>
     </section>
 
-    <section class="paquetes">
+    <section class="paquetes" id="Promociones">
       <div class="paquetes__texto" data-aos="fade-up">
         <h2><span class="YellowSpan">promociones</span> y paquetes</h2>
         <p>Aprovecha nuestras ofertas especiales y ahorra en grande</p>
@@ -237,15 +246,14 @@
           <div class="item__info">
             <h3>Paquete individual 1</h3>
             <ul>
-              <li><span>✓</span> 10 Alitas o Boneless</li>
-              <li><span>✓</span> Papas regulares</li>
-              <li><span>✓</span> Refresco 600ml</li>
+              <li><span>✓</span> Hamburgesa</li>
+              <li><span>✓</span> Papas</li>
+              <li><span>✓</span> Alitas</li>
             </ul>
           </div>
 
           <div class="item__bottom">
-            <p class="YellowSpan">$140</p>
-            <button class="Btn-4">Pedir paquete</button>
+            <p class="YellowSpan">$120</p>
           </div>
         </div>
         <!-- item fin -->
@@ -278,17 +286,16 @@
           </div>
 
           <div class="item__info">
-            <h3>Paquete individual 1</h3>
+            <h3>Paquete individual 2</h3>
             <ul>
-              <li><span>✓</span> 10 Alitas o Boneless</li>
-              <li><span>✓</span> Papas regulares</li>
-              <li><span>✓</span> Refresco 600ml</li>
+              <li><span>✓</span> Hot Dog</li>
+              <li><span>✓</span> Papas</li>
+              <li><span>✓</span> Alitas</li>
             </ul>
           </div>
 
           <div class="item__bottom">
-            <p class="YellowSpan">$140</p>
-            <button class="Btn-4">Pedir paquete</button>
+            <p class="YellowSpan">$100</p>
           </div>
         </div>
         <!-- item fin -->
@@ -315,21 +322,20 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
 
-            <p>Ahorra $25</p>
+            <p>Para compartir</p>
           </div>
 
           <div class="item__info">
-            <h3>Paquete individual 1</h3>
+            <h3>Super Alas</h3>
             <ul>
-              <li><span>✓</span> 10 Alitas o Boneless</li>
-              <li><span>✓</span> Papas regulares</li>
-              <li><span>✓</span> Refresco 600ml</li>
+              <li><span>✓</span> 20pz de Alitas</li>
+              <li><span>✓</span> Aderezo Ranch</li>
+              <br />
             </ul>
           </div>
 
           <div class="item__bottom">
-            <p class="YellowSpan">$140</p>
-            <button class="Btn-4">Pedir paquete</button>
+            <p class="YellowSpan">$200</p>
           </div>
         </div>
         <!-- item fin -->
@@ -349,7 +355,7 @@
             width="500"
             height="320"
             src="build/img/ambiente1.jpg"
-            alt="Alaburger ambiente"
+            alt="Logo de Alaburger"
           />
           <p>Nuestro logo</p>
         </div>
@@ -359,7 +365,7 @@
             width="500"
             height="320"
             src="build/img/ambiente2.jpg"
-            alt="Alaburger ambiente"
+            alt="Hamburgesas de Alaburger"
           />
 
           <p>Nuestras hamburgesas</p>
@@ -369,26 +375,26 @@
           <img
             width="500"
             height="320"
-            src="build/img/ambiente3.jpg"
-            alt="Alaburger ambiente"
+            src="build/img/hot_dog.jpg"
+            alt="Hot Dog de Alaburger"
           />
 
-          <p>Queso</p>
+          <p>Nuestro hot dog</p>
         </div>
 
         <div class="item" data-aos="zoom-in" data-aos-delay="600">
           <img
             width="500"
             height="320"
-            src="build/img/ambiente4.jpg"
-            alt="Alaburger ambiente"
+            src="build/img/paquete_individual.jpg"
+            alt="Paquete individual de Alaburger"
           />
-          <p>Nuestro equipo</p>
+          <p>Nuestro paquete individual</p>
         </div>
       </div>
     </section>
 
-    <section class="contacto" data-aos="fade-up">
+    <section class="contacto" data-aos="fade-up" id="Contacto">
       <div class="contacto__top">
         <h2>Contactanos</h2>
         <p>
@@ -450,7 +456,6 @@
 
             <div class="item__bottom">
               <p>Lunes</p>
-              <p>Miercoles</p>
               <p>Jueves</p>
               <p>Viernes</p>
               <p>Sabado/Domingo</p>
@@ -570,9 +575,9 @@
         <div class="footer__col footer__links">
           <h3>Enlaces Rápidos</h3>
           <ul>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Promociones</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#Menu">Menu</a></li>
+            <li><a href="#Promociones">Promociones</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
           </ul>
         </div>
 
@@ -598,7 +603,7 @@
               ></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            Av. Principal #123, Col. Centro
+            C. Victoria #5, Col. Centro
           </p>
 
           <p>
@@ -618,26 +623,7 @@
                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
               ></path>
             </svg>
-            +52 123 456 7890
-          </p>
-
-          <p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#fbbf24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-clock w-4 h-4 mt-1 flex-shrink-0 text-primary"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            Lun - Dom: 1:00 PM - 11:00 PM
+            +52 55 4912 5716
           </p>
         </div>
 

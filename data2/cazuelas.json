@@ -12,7 +12,7 @@
       "id": "pieza-cazuela",
       "nombre": "Pieza individual",
       "descripcion": null,
-      "basePrice": 35,
+      "basePrice": 30,
       "variants": [
         {
           "type": "proteina",

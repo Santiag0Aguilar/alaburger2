@@ -5,7 +5,7 @@
       "id": "orden-alitas",
       "nombre": "Orden de Alitas",
       "descripcion": null,
-      "basePrice": 78,
+      "basePrice": 70,
       "variants": [
         {
           "type": "salsa",
@@ -25,14 +25,14 @@
       "id": "orden-boneless",
       "nombre": "Orden de Boneless",
       "descripcion": "Acompañado de aderezo Ranch y vegetales.",
-      "basePrice": 88,
+      "basePrice": 80,
       "variants": []
     },
     {
       "id": "alipapas",
       "nombre": "Alipapas",
       "descripcion": null,
-      "basePrice": 98,
+      "basePrice": 90,
       "variants": []
     },
     {

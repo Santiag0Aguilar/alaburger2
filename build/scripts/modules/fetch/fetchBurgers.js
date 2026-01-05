@@ -1,16 +1,7 @@
-async function fetchBurgers() {
-  try {
-    const url =
-      "https://raw.githubusercontent.com/Santiag0Aguilar/alaburger2/main/data/burgers.json";
-    const response = await fetch(url);
-    if (!response.ok) throw new Error("Error al cargar");
+import fetchGeneral from "./../utils/fetchGeneral.js";
 
-    const data = await response.json();
-
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-}
+const fetchBurgers = await fetchGeneral(
+  "https://raw.githubusercontent.com/Santiag0Aguilar/alaburger2/main/data/burgers.json"
+);
 
 export default fetchBurgers;
