@@ -120,8 +120,8 @@
       "basePrice": 155
     },
     {
-      "id": "snacks-burger",
-      "nombre": "Snacks Burger",
+      "id": "smash-burger",
+      "nombre": "Smash Burger",
       "descripcion": "Pan brioche, hamburguesa con carne 100% res con queso tipo americano, mermelada de tocino, aderezos.",
       "basePrice": 150
     },
@@ -133,3 +133,4 @@
     }
   ]
 }
+
