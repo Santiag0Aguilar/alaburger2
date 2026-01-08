@@ -1,0 +1,77 @@
+[
+  {
+    "id": "apaxco_centro",
+    "nombre": "Apaxco Centro",
+    "costo": 0
+  },
+  {
+    "id": "loma",
+    "nombre": "Loma",
+    "costo": 20
+  },
+  {
+    "id": "pixcuay",
+    "nombre": "Pixcuay",
+    "costo": 20
+  },
+  {
+    "id": "santa_maria",
+    "nombre": "Santa María",
+    "costo": 25
+  },
+  {
+    "id": "ermita",
+    "nombre": "Ermita",
+    "costo": 35
+  },
+  {
+    "id": "holcim",
+    "nombre": "Holcim",
+    "costo": 20
+  },
+  {
+    "id": "bio_papel",
+    "nombre": "Bio Papel",
+    "costo": 20
+  },
+  {
+    "id": "la_estacion",
+    "nombre": "La Estación",
+    "costo": 20
+  },
+  {
+    "id": "coyotillos",
+    "nombre": "Coyotillos",
+    "costo": 20
+  },
+  {
+    "id": "col_juarez",
+    "nombre": "Col. Juárez",
+    "costo": 20
+  },
+  {
+    "id": "tres_de_mayo",
+    "nombre": "3 de Mayo",
+    "costo": 20
+  },
+  {
+    "id": "santa_cecilia",
+    "nombre": "Santa Cecilia",
+    "costo": 20
+  },
+  {
+    "id": "perez",
+    "nombre": "Pérez",
+    "costo": 20
+  },
+  {
+    "id": "hacienda_vieja",
+    "nombre": "Hacienda Vieja",
+    "costo": 35
+  },
+  {
+    "id": "caseta_arco_norte",
+    "nombre": "Caseta Arco Norte",
+    "costo": 35
+  }
+]
