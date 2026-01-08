@@ -12,12 +12,13 @@ function alertAdd(producto, eliminado = false) {
       Se elimino correctamente una ${producto}
     `;
   }
-    setTimeout(() => {
+
+  setTimeout(() => {
     alerta.remove();
   }, 2000);
+
   return alerta;
 }
 
 alertAdd();
 export default alertAdd;
-

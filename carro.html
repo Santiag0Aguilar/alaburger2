@@ -62,7 +62,7 @@
         <form id="cartForm">
           <label for="pedido">Tipo de pedido</label>
           <select name="pedido" id="pedido" class="cart__select">
-            <option value="para llevar">A domicilio</option>
+            <option value="domicilio">A domicilio</option>
             <option value="para recoger">Pasar a recoger</option>
             <option value="comer aqui">Comer en el establecimiento</option>
           </select>
@@ -104,6 +104,13 @@
             />
           </div>
 
+          <!-- Solo domicilio -->
+          <div id="coloniaContenedor">
+            <label for="colonia">Seleccione una colonia</label>
+            <select name="colonia" id="colonia" class="cart__select">
+              <option selected disabled>--Seleccione la colonia</option>
+            </select>
+          </div>
           <!-- Siempre activo -->
           <label for="nombre">Nombre de quien recibe</label>
           <input
@@ -280,6 +287,6 @@
       });
     </script>
 
-    <script type="module" src="build/scripts/index.js"></script>
+    <script type="module" src="build/scripts/index.js?v=1.0.0"></script>
   </body>
 </html>

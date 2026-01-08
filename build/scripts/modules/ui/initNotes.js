@@ -37,11 +37,11 @@ export function initNotes() {
   const nombre = document.getElementById("nombre");
   const propina = document.getElementById("propina");
   const btnLocation = document.getElementById("btnLocation");
-
+  const selectColonia = document.getElementById("coloniaContenedor");
   if (!pedido || !pago) return;
 
   const inputs = document.querySelectorAll(
-    "#pedido, #pago, #indicaciones, #efectivo, #direccion, #nombre, #propina"
+    "#pedido, #pago, #indicaciones, #efectivo, #direccion, #nombre, #propina, #coloniaContenedor"
   );
 
   /* Mostrar / ocultar campos */
@@ -51,17 +51,21 @@ export function initNotes() {
 
     // Dirección
     direccion.parentElement.style.display =
-      pedidoVal === "para llevar" ? "block" : "none";
+      pedidoVal === "domicilio" ? "block" : "none";
 
     // Botón de ubicación solo si es domicilio
     if (btnLocation) {
-      btnLocation.style.display =
-        pedidoVal === "para llevar" ? "block" : "none";
+      btnLocation.style.display = pedidoVal === "domicilio" ? "block" : "none";
+    }
+    // Boton de colonia solo si es domicilio
+    if (selectColonia) {
+      selectColonia.style.display =
+        pedidoVal === "domicilio" ? "block" : "none";
     }
 
     // Efectivo
     efectivo.parentElement.style.display =
-      pedidoVal === "para llevar" && pagoVal === "efectivo" ? "block" : "none";
+      pedidoVal === "domicilio" && pagoVal === "efectivo" ? "block" : "none";
   }
 
   /* Guardar datos del form */

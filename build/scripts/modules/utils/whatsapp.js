@@ -4,6 +4,10 @@ import { getNotes, getFormData } from "./cartNotes.js";
 import generalAlert from "./generalAlert.js";
 
 const body = document.querySelector("body");
+
+/* ===================== */
+/* WHATSAPP MESSAGE */
+/* ===================== */
 export function generarMensajeWhatsApp() {
   const cart = getCart();
   if (!cart.length) return "";
@@ -11,7 +15,7 @@ export function generarMensajeWhatsApp() {
   const form = getFormData() || {};
   const propina = Number(form.propina) || 0;
   const efectivo = Number(form.efectivo) || 0;
-  let total = 0;
+  const envio = getCostoEnvio();
 
   let mensaje =
     "🔥 *ALA BURGER* 🔥\n" +
@@ -19,8 +23,7 @@ export function generarMensajeWhatsApp() {
     "🍔 *Pedido del cliente*\n\n";
 
   cart.forEach((item) => {
-    const subtotal = item.precio * item.cantidad;
-    total += subtotal;
+    const itemSubtotal = item.precio * item.cantidad;
 
     mensaje += `• ${item.nombre}`;
     if (item.size) mensaje += ` (${item.size})`;
@@ -28,10 +31,10 @@ export function generarMensajeWhatsApp() {
     if (item.selections?.salsa) mensaje += ` (${item.selections.salsa})`;
 
     mensaje += `\n  ➕ Cantidad: ${item.cantidad}`;
-    mensaje += `\n  💲 Subtotal: $${subtotal}\n\n`;
+    mensaje += `\n  💲 Subtotal: $${itemSubtotal}\n\n`;
   });
 
-  /* Notas por producto / carrito */
+  /* Notas */
   const notes = getNotes();
   if (notes) {
     mensaje += "📝 *Notas del pedido*\n";
@@ -41,40 +44,32 @@ export function generarMensajeWhatsApp() {
   /* ===================== */
   /* INFO DEL FORMULARIO */
   /* ===================== */
-
   mensaje += "━━━━━━━━━━━━━━━\n";
   mensaje += "📋 *Datos del pedido*\n";
 
-  if (form.pedido) {
-    mensaje += `📦 *Tipo de pedido:* ${form.pedido}\n`;
-  }
+  mensaje += `📦 *Tipo de pedido:* ${form.pedido}\n`;
+  mensaje += `💳 *Forma de pago:* ${form.pago}\n`;
 
-  if (form.pago) {
-    mensaje += `💳 *Forma de pago:* ${form.pago}\n`;
-  }
-
-  if (form.pedido === "para llevar" && form.direccion) {
+  if (form.pedido === "domicilio") {
     mensaje += `📍 *Dirección:* ${form.direccion}\n`;
   }
 
-  if (form.pago === "efectivo" && form.efectivo) {
-    mensaje += `💵 *Pagaré con:* $${form.efectivo}\n`;
+  if (form.pago === "efectivo") {
+    mensaje += `💵 *Pagaré con:* $${efectivo}\n`;
   }
 
   if (form.indicaciones) {
     mensaje += `📝 *Indicaciones:* ${form.indicaciones}\n`;
   }
 
-  if (form.nombre) {
-    mensaje += `👤 *Recibe:* ${form.nombre}\n`;
-    mensaje += `👨‍🍳 ${form.nombre} , tu pedido se está preparando. #InnBeta `;
-  }
+  mensaje += `👤 *Recibe:* ${form.nombre}\n`;
+  mensaje += `👨‍🍳 ${form.nombre}, tu pedido se está preparando. #InnBeta\n`;
 
-  /* Datos bancarios si es transferencia */
+  /* Transferencia */
   if (form.pago === "transferencia") {
     mensaje +=
       "\n━━━━━━━━━━━━━━━\n" +
-      "\n🏦 *Datos para transferencia*\n" +
+      "🏦 *Datos para transferencia*\n" +
       "BBVA\n" +
       "Tarjeta de débito\n" +
       "4152 3136 2163 2301\n\n" +
@@ -84,43 +79,66 @@ export function generarMensajeWhatsApp() {
       "Diana Jamila Cruz Resendiz\n";
   }
 
-  if (form.propina) {
-    mensaje += `\nPropina:\n` + form.propina;
-  }
+  /* ===================== */
+  /* TOTALES */
+  /* ===================== */
+
   if (propina > 0) {
-    mensaje += "\n━━━━━━━━━━━━━━━\n";
-    mensaje += `Total sin propina:* $${total}`;
-    mensaje += "\n━━━━━━━━━━━━━━━\n";
     mensaje += `💖 *Propina:* $${propina}\n`;
-    total += propina;
   }
-  /* Cambio si paga en efectivo */
-  if (form.pago === "efectivo" && efectivo >= total) {
-    const cambio = efectivo - total;
-    mensaje += `💸 *Cambio:* $${cambio}\n`;
+
+  if (envio > 0) {
+    mensaje += `🚚 *Envío:* $${envio}\n`;
   }
+
+  const totalFinal = calcularTotalReal(cart, propina, envio);
+
+  if (form.pago === "efectivo" && efectivo >= totalFinal) {
+    mensaje += `💸 *Cambio:* $${efectivo - totalFinal}\n`;
+  }
+
   mensaje +=
     "\n━━━━━━━━━━━━━━━\n" +
-    `💵 *Total a pagar con propina: $${total}*\n\n` +
+    `💵 *Total a pagar: $${totalFinal}*\n\n` +
     "✅ *Gracias por ordenar en AlaBurger* 🍔";
 
   return encodeURIComponent(mensaje);
 }
 
+/* ===================== */
+/* SEND TO WHATSAPP */
+/* ===================== */
 export function enviarPedidoWhatsApp(telefono) {
   const cart = getCart();
   if (!cart.length) return;
 
   const form = getFormData() || {};
-
   const propina = Number(form.propina) || 0;
   const efectivo = Number(form.efectivo) || 0;
+  const envio = getCostoEnvio();
 
-  const totalReal = calcularTotalConPropina(cart, propina);
+  /* ===================== */
+  /* VALIDACIONES OBLIGATORIAS */
+  /* ===================== */
 
-  /* 🚨 VALIDACIÓN CLAVE */
+  const camposObligatorios =
+    form.pedido &&
+    form.pago &&
+    form.nombre &&
+    (form.pedido !== "domicilio" || form.direccion) &&
+    (form.pago !== "efectivo" || efectivo > 0) &&
+    (form.pedido !== "domicilio" || envio > 0);
+
+  if (!camposObligatorios) {
+    body.appendChild(generalAlert("Todos los campos son obligatorios"));
+    return;
+  }
+
+  const totalReal = calcularTotalReal(cart, propina, envio);
+
+  /* 🚨 VALIDACIÓN DE EFECTIVO */
   if (
-    form.pedido === "para llevar" &&
+    form.pedido === "domicilio" &&
     form.pago === "efectivo" &&
     efectivo < totalReal
   ) {
@@ -138,12 +156,25 @@ export function enviarPedidoWhatsApp(telefono) {
   window.open(`https://wa.me/${telefono}?text=${mensaje}`, "_blank");
 }
 
-function calcularTotalConPropina(cart, propina = 0) {
+/* ===================== */
+/* HELPERS */
+/* ===================== */
+function calcularTotalReal(cart, propina = 0, envio = 0) {
   let total = 0;
 
   cart.forEach((item) => {
     total += item.precio * item.cantidad;
   });
 
-  return total + propina;
+  return total + propina + envio;
+}
+
+function getCostoEnvio() {
+  const select = document.querySelector("#colonia");
+  if (!select) return 0;
+
+  const optionSelected = select.options[select.selectedIndex];
+  if (!optionSelected) return 0;
+
+  return Number(optionSelected.dataset.precio) || 0;
 }
