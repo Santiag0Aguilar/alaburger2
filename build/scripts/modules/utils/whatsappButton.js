@@ -5,8 +5,9 @@ export function initWhatsAppButton() {
   if (!btn) return;
 
   btn.addEventListener("click", () => {
-    enviarPedidoWhatsApp("5627347647"); // tu número
+    enviarPedidoWhatsApp("5549125716"); // tu número
   });
 }
 
 initWhatsAppButton();
+
