@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alaburger - Hamburgesas</title>
-    <link rel="stylesheet" href="build/css/index.css" />
+    <link rel="stylesheet" href="build/css/index.css?v=2.0.0" />
 
     <!-- AOS CSS -->
     <link
@@ -12,42 +12,51 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
   </head>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#fbbf24",
+            secondary: "#000000",
+            textMain: "#f8fafc",
+            textSecondary: "#e2e8f0",
+            bgMain: "#0f172a",
+            bgCard: "#1e293b",
+            bgHighlight: "#fbbf24",
+            hoverFocus: "#fdba74",
+          },
+        },
+      },
+    };
+  </script>
   <body>
-    <header class="header">
-      <div class="header__top">
-        <div class="header__top--main">
-          <div class="header__top--title">
-            <a href="index.html">
-              <span class="resaltar">Ala</span><span>burger</span>
-            </a>
+    <header class="sticky top-0 z-50 bg-bgMain border-b border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="header__top--title">
+          <a href="index.html">
+            <span class="resaltar">Ala</span><span>burger</span>
+          </a>
+        </div>
+
+        <!-- Carrito (MISMAS clases que tu JS usa) -->
+        <a href="carro.html" class="relative">
+          <div
+            class="cart flex items-center gap-2 bg-primary text-black px-4 py-2 rounded-xl font-semibold"
+          >
+            🛒
+            <span
+              class="cart__count absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 flex items-center justify-center rounded-full"
+            >
+              0
+            </span>
           </div>
-
-          <img
-            class="menu-icon"
-            src="build/img/hamburger-menu-svgrepo-com (1).svg"
-            alt="hamburger-menu-svgrepo-com"
-          />
-        </div>
-
-        <div class="header__desplegable">
-          <nav class="header__top--nav">
-            <a href="index.html#Menu">Menu</a>
-            <a href="index.html#Promociones">Promociones</a>
-            <a href="index.html#Contacto">Contacto</a>
-            <a href="carro.html">
-              <div class="cart">
-                <img
-                  width="10px"
-                  height="10px"
-                  src="build/img/shop-cart-svgrepo-com.svg"
-                  alt="🛒"
-                />
-                <span class="cart__count">0</span>
-              </div>
-            </a>
-          </nav>
-          <a class="Btn-3" href="index.html#Menu">Ordena ahora</a>
-        </div>
+        </a>
       </div>
     </header>
     <section class="cart__panel">
@@ -287,7 +296,6 @@
       });
     </script>
 
-    <script type="module" src="build/scripts/index.js?v=1.0.0"></script>
+    <script type="module" src="build/scripts/index.js?v=2.0.0"></script>
   </body>
 </html>
-
