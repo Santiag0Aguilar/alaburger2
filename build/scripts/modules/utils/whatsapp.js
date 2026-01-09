@@ -127,8 +127,7 @@ export function enviarPedidoWhatsApp(telefono) {
     form.nombre &&
     (form.pedido !== "domicilio" || form.direccion) &&
     (form.pago !== "efectivo" || efectivo > 0) &&
-    (form.pedido !== "domicilio" || envio > 0);
-
+    (form.pedido !== "domicilio" || hayColoniaSeleccionada());
   if (!camposObligatorios) {
     body.appendChild(generalAlert("Todos los campos son obligatorios"));
     return;
@@ -177,4 +176,9 @@ function getCostoEnvio() {
   if (!optionSelected) return 0;
 
   return Number(optionSelected.dataset.precio) || 0;
+}
+
+function hayColoniaSeleccionada() {
+  const select = document.querySelector("#colonia");
+  return select && select.value !== "";
 }
